@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		184856EEEC965668DC3284C7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A38CEEF39F13705D7835B6 /* libPods.a */; };
 		F8C5B6EE1A508BE200CF2A89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5B6ED1A508BE200CF2A89 /* main.m */; };
 		F8C5B6F11A508BE200CF2A89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5B6F01A508BE200CF2A89 /* AppDelegate.m */; };
 		F8C5B6F91A508BE200CF2A89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C5B6F81A508BE200CF2A89 /* Images.xcassets */; };
@@ -17,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04A38CEEF39F13705D7835B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		4C482034CA3A0BDBA9DC2BC4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		5755F29F034F70E1112C204A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		F8C5B6E81A508BE200CF2A89 /* CirclePaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CirclePaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5B6EC1A508BE200CF2A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C5B6ED1A508BE200CF2A89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -39,18 +43,38 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				184856EEEC965668DC3284C7 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8576690998289EBE12D52528 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				4C482034CA3A0BDBA9DC2BC4 /* Pods.debug.xcconfig */,
+				5755F29F034F70E1112C204A /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		B1B5610BDB1F60471668B870 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04A38CEEF39F13705D7835B6 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		F8C5B6DF1A508BE200CF2A89 = {
 			isa = PBXGroup;
 			children = (
 				F8C5B6EA1A508BE200CF2A89 /* CirclePaint */,
 				F8C5B7041A508BE200CF2A89 /* CirclePaintTests */,
 				F8C5B6E91A508BE200CF2A89 /* Products */,
+				8576690998289EBE12D52528 /* Pods */,
+				B1B5610BDB1F60471668B870 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -121,9 +145,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = F8C5B70B1A508BE200CF2A89 /* Build configuration list for PBXNativeTarget "CirclePaint" */;
 			buildPhases = (
+				DAB8236B66A46F90A1631F74 /* Check Pods Manifest.lock */,
 				F8C5B6E41A508BE200CF2A89 /* Sources */,
 				F8C5B6E51A508BE200CF2A89 /* Frameworks */,
 				F8C5B6E61A508BE200CF2A89 /* Resources */,
+				A4C3EB40DE1FFDD4BF3B1BDC /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -140,8 +166,9 @@
 		F8C5B6E01A508BE200CF2A89 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = CP;
 				LastUpgradeCheck = 0610;
-				ORGANIZATIONNAME = w91379137;
+				ORGANIZATIONNAME = Zoaks;
 				TargetAttributes = {
 					F8C5B6E71A508BE200CF2A89 = {
 						CreatedOnToolsVersion = 6.1.1;
@@ -178,6 +205,39 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		A4C3EB40DE1FFDD4BF3B1BDC /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DAB8236B66A46F90A1631F74 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		F8C5B6E41A508BE200CF2A89 /* Sources */ = {
@@ -272,10 +332,11 @@
 		};
 		F8C5B70C1A508BE200CF2A89 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 4C482034CA3A0BDBA9DC2BC4 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CirclePaint/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
@@ -283,10 +344,11 @@
 		};
 		F8C5B70D1A508BE200CF2A89 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5755F29F034F70E1112C204A /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = CirclePaint/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
