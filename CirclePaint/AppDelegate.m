@@ -8,6 +8,7 @@
 
 #import "AppDelegate.h"
 #import "MainViewController.h"
+#import "CPSideMenuViewController.h"
 
 @interface AppDelegate ()
 
@@ -15,18 +16,33 @@
 
 @implementation AppDelegate
 
++ (AppDelegate *)sharedAppDelegate
+{
+    return (id)[[UIApplication sharedApplication] delegate];
+}
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [self.window makeKeyAndVisible];
     
-    MainViewController *vc = [[MainViewController alloc] init];
-    UINavigationController *nc = [[UINavigationController alloc] initWithRootViewController:vc];
-    nc.navigationBarHidden = YES;
+    MainViewController *mainVC = [[MainViewController alloc] init];
+    UINavigationController *mainNC = [[UINavigationController alloc] initWithRootViewController:mainVC];
+    mainNC.navigationBarHidden = YES;
     
-    [self.window setRootViewController:nc];
+    self.revealSideViewController = [[PPRevealSideViewController alloc] initWithRootViewController:mainNC];
+
+//    self.revealSideViewController.panInteractionsWhenOpened = PPRevealSideInteractionContentView;
+//    self.revealSideViewController.panInteractionsWhenClosed = PPRevealSideInteractionContentView;
     
+    self.revealSideViewController.directionsToShowBounce = PPRevealSideDirectionLeft;
+    
+    self.window.rootViewController = self.revealSideViewController;
+
+    CPSideMenuViewController *sideVC = [CPSideMenuViewController sharedViewController];
+    [self.revealSideViewController preloadViewController:sideVC
+                                                 forSide:PPRevealSideDirectionLeft
+                                              withOffset:200];
     return YES;
 }
 

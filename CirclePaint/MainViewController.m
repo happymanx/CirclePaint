@@ -7,6 +7,7 @@
 //
 
 #import "MainViewController.h"
+#import "CPSideMenuViewController.h"
 
 @interface MainViewController ()
 
@@ -16,8 +17,6 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    //畫布設定
-    UIGraphicsBeginImageContextWithOptions(basePaintView.frame.size, NO, 1.0);
     
     //畫上背景
     [baseShowImageView.image drawAtPoint:CGPointMake(0, 0)];
@@ -30,6 +29,10 @@
 -(void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
+
+    //畫布設定
+    UIGraphicsBeginImageContextWithOptions(basePaintView.frame.size, NO, 2.0);
+
     UIImage *colorPickerImage = [UIImage imageNamed:@"colorwheel_buttonpanel"];
     self.colorWheelPicker.colorWheel.image = colorPickerImage;
     self.colorWheelPicker.delegate = self;
@@ -157,5 +160,9 @@
 
 }
 
+-(IBAction)showSideMenuAction:(UIButton *)sender
+{
+    [self showLeftMenu:nil];
+}
 
 @end

@@ -8,6 +8,10 @@
 
 /* Begin PBXBuildFile section */
 		184856EEEC965668DC3284C7 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 04A38CEEF39F13705D7835B6 /* libPods.a */; };
+		964048D41A5A95F00007900D /* CPTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 964048D21A5A95F00007900D /* CPTableViewCell.m */; };
+		964048D51A5A95F00007900D /* CPTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 964048D31A5A95F00007900D /* CPTableViewCell.xib */; };
+		968FB9A71A5A8082009263E8 /* CPSideMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 968FB9A51A5A8082009263E8 /* CPSideMenuViewController.m */; };
+		968FB9A81A5A8082009263E8 /* CPSideMenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 968FB9A61A5A8082009263E8 /* CPSideMenuViewController.xib */; };
 		F8C5B6EE1A508BE200CF2A89 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5B6ED1A508BE200CF2A89 /* main.m */; };
 		F8C5B6F11A508BE200CF2A89 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F8C5B6F01A508BE200CF2A89 /* AppDelegate.m */; };
 		F8C5B6F91A508BE200CF2A89 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F8C5B6F81A508BE200CF2A89 /* Images.xcassets */; };
@@ -21,6 +25,12 @@
 		04A38CEEF39F13705D7835B6 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C482034CA3A0BDBA9DC2BC4 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		5755F29F034F70E1112C204A /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+		964048D11A5A95F00007900D /* CPTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPTableViewCell.h; sourceTree = "<group>"; };
+		964048D21A5A95F00007900D /* CPTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPTableViewCell.m; sourceTree = "<group>"; };
+		964048D31A5A95F00007900D /* CPTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPTableViewCell.xib; sourceTree = "<group>"; };
+		968FB9A41A5A8082009263E8 /* CPSideMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CPSideMenuViewController.h; sourceTree = "<group>"; };
+		968FB9A51A5A8082009263E8 /* CPSideMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CPSideMenuViewController.m; sourceTree = "<group>"; };
+		968FB9A61A5A8082009263E8 /* CPSideMenuViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CPSideMenuViewController.xib; sourceTree = "<group>"; };
 		F8C5B6E81A508BE200CF2A89 /* CirclePaint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CirclePaint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F8C5B6EC1A508BE200CF2A89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F8C5B6ED1A508BE200CF2A89 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -99,6 +109,12 @@
 				F8C5B71C1A50B86000CF2A89 /* NSObject+GCDBackgroundTimer.h */,
 				F8C5B7181A50A5EB00CF2A89 /* ColorPicker */,
 				F8C5B6EB1A508BE200CF2A89 /* Supporting Files */,
+				968FB9A41A5A8082009263E8 /* CPSideMenuViewController.h */,
+				968FB9A51A5A8082009263E8 /* CPSideMenuViewController.m */,
+				968FB9A61A5A8082009263E8 /* CPSideMenuViewController.xib */,
+				964048D11A5A95F00007900D /* CPTableViewCell.h */,
+				964048D21A5A95F00007900D /* CPTableViewCell.m */,
+				964048D31A5A95F00007900D /* CPTableViewCell.xib */,
 			);
 			path = CirclePaint;
 			sourceTree = "<group>";
@@ -198,7 +214,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				964048D51A5A95F00007900D /* CPTableViewCell.xib in Resources */,
 				F8C5B7171A508D8C00CF2A89 /* 20140916105724.png in Resources */,
+				968FB9A81A5A8082009263E8 /* CPSideMenuViewController.xib in Resources */,
 				F8C5B6F91A508BE200CF2A89 /* Images.xcassets in Resources */,
 				F8C5B7151A508C4400CF2A89 /* MainViewController.xib in Resources */,
 			);
@@ -247,6 +265,8 @@
 				F8C5B6F11A508BE200CF2A89 /* AppDelegate.m in Sources */,
 				F8C5B71B1A50A5EB00CF2A89 /* DXColorWheelPicker.m in Sources */,
 				F8C5B7141A508C4400CF2A89 /* MainViewController.m in Sources */,
+				968FB9A71A5A8082009263E8 /* CPSideMenuViewController.m in Sources */,
+				964048D41A5A95F00007900D /* CPTableViewCell.m in Sources */,
 				F8C5B6EE1A508BE200CF2A89 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

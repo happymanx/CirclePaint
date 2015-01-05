@@ -7,11 +7,15 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "PPRevealSideViewController.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
 
++ (AppDelegate *)sharedAppDelegate;
+
+@property (strong, nonatomic) PPRevealSideViewController *revealSideViewController;
 
 @end
 
